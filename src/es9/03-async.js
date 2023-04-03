@@ -10,3 +10,12 @@ other.next().then(response => console.log(response.value));
 other.next().then(response => console.log(response.value));
 other.next().then(response => console.log(response.value));
 console.log('Hello !');
+
+async function arrayOfNames(array) {
+    for await (let value of array){
+        console.log(value);
+    }
+}
+
+const names = arrayOfNames(['Jonny', 'Carlos', 'Daniel', 'Lloana']);
+console.log('After');
